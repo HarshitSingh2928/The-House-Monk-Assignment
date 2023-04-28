@@ -1,5 +1,5 @@
 import React from "react";
-import Card from 'react-bootstrap/Card';
+import Card from "react-bootstrap/Card";
 import { Carddata } from "./data";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,17 +19,21 @@ const BioPage = () => {
     <div className="biopage">
       <header>
         <div className="back-btn" onClick={goBack}>
-          <FontAwesomeIcon icon={faArrowLeft} fade style={{marginRight:"10px"}}/>
+          <FontAwesomeIcon
+            icon={faArrowLeft}
+            fade
+            style={{ marginRight: "10px" }}
+          />
           Back
         </div>
-        <div style={{ display: "flex" }}>
+        <div className="header-pic">
           <img
             src={user}
             style={{ border: "solid grey", borderRadius: "7px" }}
           />
           <div className="user-handle">
             <p>{card.title}</p>
-            @user{card.id}
+            <div>@handle_user{card.id}</div>
           </div>
         </div>
       </header>
@@ -52,10 +56,13 @@ const BioPage = () => {
         <div className="repo">
           <h5>Pinned Repositories</h5>
           {Array.from({ length: 3 }).map((_, idx) => (
-            <div style={{marginBottom:"10px",width:"100%"}}>
-          <CardTile title="username/reponame" description=" Description about Repo"/>
-          </div>
-            ))}
+            <div style={{ marginBottom: "10px", width: "100%" }}>
+              <CardTile
+                title="username/reponame"
+                description=" Description about Repo"
+              />
+            </div>
+          ))}
         </div>
       </main>
     </div>

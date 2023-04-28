@@ -6,12 +6,11 @@
   padding: 40px;
 }
 
-.profile_header{
- 
+.profile_header {
   display: flex;
   justify-content: start;
 }
-.profile_header h2{
+.profile_header h2 {
   display: flex;
   align-items: center;
 }
@@ -23,13 +22,14 @@
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: #007bff;
+  background-color: #007bffb0;
   padding: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 50%;
 }
-search-icon{
+.search-icon {
   color: #c8d1e0;
+  margin-left: 20px;
 }
 
 .search-bar input {
@@ -55,7 +55,7 @@ search-icon{
   color: #c8d1e0;
   font-size: 1.5rem;
   padding: 0;
-  margin: 0;
+  margin-right: 20px;
   cursor: pointer;
 }
 
@@ -68,15 +68,13 @@ search-icon{
 }
 .card-with-shadow {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
- width: 100%;
- 
+  width: 100%;
 }
 
 .card-header {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-
 }
 
 .card-header svg {
@@ -98,38 +96,41 @@ search-icon{
   text-align: start;
 }
 
-.biopage header{
-display: flex;
-flex-direction: column;
-background-color: lightgrey;
-align-items: start;
-padding: 40px;
-
+.biopage header {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+  align-items: start;
+  padding: 40px;
 }
-.back-btn{
+.back-btn {
   cursor: pointer;
   margin-bottom: 80px;
 }
-.user-handle{
+.user-handle {
   display: flex;
   flex-direction: column;
   justify-content: end;
   padding-left: 20px;
+  align-items: start;
 }
-.user-handle p{
+.user-handle p {
   margin-bottom: 0px;
 }
-.bio-para{
+.bio-para {
   text-align: start;
 }
-.bio-para h5{
+.bio-para h5 {
   margin-bottom: 0px;
   color: rgb(149, 145, 145);
 }
-.repo{
+.repo {
   display: flex;
   flex-direction: column;
   align-items: start;
+}
+.header-pic {
+  display: flex
 }
 
 @media (max-width: 768px) {
@@ -144,9 +145,16 @@ padding: 40px;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .profile_header img {
     margin-bottom: 10px;
+  }
+  .header-pic {
+    display: flex;
+    flex-direction: column;
+  }
+  .user-handle{
+    padding-left: 0px;
   }
 }
 @keyframes App-logo-spin {

@@ -1,23 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
 
+import { ClipLoader } from 'react-spinners';
+import { useState,lazy, Suspense } from 'react';
+import { Carddata } from './components/data';
 function App() {
+  const [searchText, setSearchText] = useState('');
+
+  const handleSearchTextChange = (text) => {
+    setSearchText(text);
+  };
+
+  const handleClearSearchText = () => {
+    setSearchText('');
+  };
+  const CardGrid = lazy(() => import('../src/components/CardGrid'));
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header style={{backgroundColor:"lightgrey",padding:"20px"}}>
+        <Header
+         searchText={searchText}
+         onSearchTextChange={handleSearchTextChange}
+         onClearSearchText={handleClearSearchText}/>
       </header>
+      <main>
+      <Suspense fallback={ <ClipLoader  color="#007bff" size={35} />}>
+        <CardGrid data={Carddata} searchText={searchText}/>
+        </Suspense>
+      </main>
     </div>
   );
 }

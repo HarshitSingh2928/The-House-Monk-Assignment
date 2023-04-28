@@ -2,32 +2,113 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App main {
+  padding: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile_header{
+ 
   display: flex;
-  flex-direction: column;
+  justify-content: start;
+}
+.profile_header h2{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #007bff;
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 50%;
+}
+search-icon{
+  color: #c8d1e0;
+}
+
+.search-bar input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: #c8d1e0;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  text-align: center;
+}
+
+.search-bar input::placeholder {
+  color: #c8d1e0;
+}
+
+.clear-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  color: #c8d1e0;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.clear-search:hover {
+  color: #f8f9fa;
+}
+
+.clear-search:focus {
+  outline: none;
+}
+.card-with-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+ 
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+}
+
+.card-header svg {
+  margin-right: 0.5rem;
+  height: 40px;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+@media (max-width: 768px) {
+  .search-bar {
+    width: 100%;
+    padding: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile_header {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile_header img {
+    margin-bottom: 10px;
+  }
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
